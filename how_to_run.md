@@ -21,13 +21,13 @@ python -m splade.train config.checkpoint_dir=./ckpt
 ### indexing run
 
 ```shell
-python -m splade.index config.checkpoint_dir=./ckpt config.index_dir=./intermediate
+python -m splade.index config.checkpoint_dir=./ckpt config.index_dir=./model_ckpt
 ```
 
 ### retrieve run
 
 ```shell
-python -m splade.retrieve config.checkpoint_dir=./ckpt config.index_dir=./intermediate config.out_dir=./output
+python -m splade.retrieve config.checkpoint_dir=./ckpt config.index_dir=./model_ckpt config.out_dir=./output
 ```
 
 ## monitoring gpu
