@@ -10,7 +10,7 @@ pip install -r requirements.txt
 mkdir intermediate ckpt model_ckpt output
 ```
 
-## run
+## run (default)
 
 ### train run
 
@@ -28,6 +28,39 @@ python -m splade.index config.checkpoint_dir=./ckpt config.index_dir=./model_ckp
 
 ```shell
 python -m splade.retrieve config.checkpoint_dir=./ckpt config.index_dir=./model_ckpt config.out_dir=./output
+```
+
+## run (msmarco)
+
+download
+
+```shell
+cd dataset
+wget https://msmarco.z22.web.core.windows.net/msmarcoranking/triples.train.small.tar.gz
+```
+
+continue or restart download
+
+```shell
+wget -c https://msmarco.z22.web.core.windows.net/msmarcoranking/triples.train.small.tar.gz
+```
+
+### train run
+
+```shell
+SPLADE_CONFIG_NAME=config_splade++_selfdistil python -m splade.train config.checkpoint_dir=./ckpt
+```
+
+### indexing run
+
+```shell
+SPLADE_CONFIG_NAME=config_splade++_selfdistil python -m splade.index config.checkpoint_dir=./ckpt config.index_dir=./model_ckpt
+```
+
+### retrieve run
+
+```shell
+SPLADE_CONFIG_NAME=config_splade++_selfdistil python -m splade.retrieve config.checkpoint_dir=./ckpt config.index_dir=./model_ckpt config.out_dir=./output
 ```
 
 ## monitoring gpu
