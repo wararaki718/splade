@@ -34,6 +34,8 @@ python -m splade.retrieve config.checkpoint_dir=./ckpt config.index_dir=./model_
 
 download
 
+https://microsoft.github.io/msmarco/Datasets
+
 ```shell
 cd dataset
 wget https://msmarco.z22.web.core.windows.net/msmarcoranking/triples.train.small.tar.gz
