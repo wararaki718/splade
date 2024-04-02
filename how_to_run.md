@@ -36,33 +36,35 @@ download
 
 https://microsoft.github.io/msmarco/Datasets
 
+ensemble distil dataset
+
 ```shell
-cd dataset
-wget https://msmarco.z22.web.core.windows.net/msmarcoranking/triples.train.small.tar.gz
+wget https://download.europe.naverlabs.com/splade/sigir22/data.tar.gz
+tar xvzf data.tar.gz
 ```
 
 continue or restart download
 
 ```shell
-wget -c https://msmarco.z22.web.core.windows.net/msmarcoranking/triples.train.small.tar.gz
+wget -c https://download.europe.naverlabs.com/splade/sigir22/data.tar.gz
 ```
 
 ### train run
 
 ```shell
-SPLADE_CONFIG_NAME=config_splade++_selfdistil python -m splade.train config.checkpoint_dir=./ckpt
+SPLADE_CONFIG_NAME=config_splade++_ensembledistil python -m splade.train config.checkpoint_dir=./ckpt
 ```
 
 ### indexing run
 
 ```shell
-SPLADE_CONFIG_NAME=config_splade++_selfdistil python -m splade.index config.checkpoint_dir=./ckpt config.index_dir=./model_ckpt
+SPLADE_CONFIG_NAME=config_splade++_ensembledistil python -m splade.index config.checkpoint_dir=./ckpt config.index_dir=./model_ckpt
 ```
 
 ### retrieve run
 
 ```shell
-SPLADE_CONFIG_NAME=config_splade++_selfdistil python -m splade.retrieve config.checkpoint_dir=./ckpt config.index_dir=./model_ckpt config.out_dir=./output
+SPLADE_CONFIG_NAME=config_splade++_ensembledistil python -m splade.retrieve config.checkpoint_dir=./ckpt config.index_dir=./model_ckpt config.out_dir=./output
 ```
 
 ## monitoring gpu

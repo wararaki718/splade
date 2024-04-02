@@ -7,4 +7,5 @@ ckpt/
 output/
 outputs/
 intermediate/
-./data/msmarco/triplets/raw.tsv
+data.tar.gz
+data
