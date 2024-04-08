@@ -1,0 +1,8 @@
+*.tar.gz
+output
+outputs
+model_ckpt
+ckpt
+model_checkpoint
+checkpoint
+*.ipynb

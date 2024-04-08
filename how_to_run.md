@@ -72,3 +72,25 @@ SPLADE_CONFIG_NAME=config_splade++_ensembledistil python -m splade.retrieve conf
 ```shell
 nvidia-smi -l 5
 ```
+
+## docker run (toy data)
+
+build
+
+```shell
+docker-compose build
+```
+
+run
+
+```shell
+docker-compose -f compose.yml -f compose.train.yml up
+```
+
+```shell
+docker-compose -f compose.yml -f compose.index.yml up
+```
+
+```shell
+docker-compose -f compose.yml -f compose.retrieve.yml up
+```
