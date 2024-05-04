@@ -94,3 +94,39 @@ docker-compose -f compose.yml -f compose.index.yml up
 ```shell
 docker-compose -f compose.yml -f compose.retrieve.yml up
 ```
+
+## use japanese dataset
+
+### download japanese dataset
+
+```shell
+mkdir -p data/mmarco/google/collections/ data/mmarco/google/queries/dev/ data/mmarco/google/queries/train/ data/mmarco/google/queries/full_dev/
+```
+
+*download dataset*
+
+- https://huggingface.co/datasets/unicamp-dl/mmarco/tree/main/data/google
+
+collections
+
+```shell
+wget -c -O data/mmarco/google/collections/raw.tsv https://huggingface.co/datasets/unicamp-dl/mmarco/resolve/main/data/google/collections/japanese_collection.tsv
+```
+
+dev dataset
+
+```shell
+wget -c -O data/mmarco/google/queries/dev/raw.tsv https://huggingface.co/datasets/unicamp-dl/mmarco/resolve/main/data/google/queries/dev/japanese_queries.dev.small.tsv
+```
+
+validation dataset
+
+```shell
+wget -c -O data/mmarco/google/queries/full_dev/raw.tsv https://huggingface.co/datasets/unicamp-dl/mmarco/resolve/main/data/google/queries/dev/japanese_queries.dev.tsv
+```
+
+train dataset
+
+```shell
+wget -c -O data/mmarco/google/queries/train/raw.tsv https://huggingface.co/datasets/unicamp-dl/mmarco/resolve/main/data/google/queries/train/japanese_queries.train.tsv
+```
