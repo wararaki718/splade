@@ -8,4 +8,5 @@ output/
 outputs/
 intermediate/
 data.tar.gz
-data
+data/msmarco
+data/mmarco
