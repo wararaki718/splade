@@ -130,3 +130,23 @@ train dataset
 ```shell
 wget -c -O data/mmarco/google/queries/train/raw.tsv https://huggingface.co/datasets/unicamp-dl/mmarco/resolve/main/data/google/queries/train/japanese_queries.train.tsv
 ```
+
+## run japanese
+
+### train run
+
+```shell
+SPLADE_CONFIG_NAME=config_splade_japanese python -m splade.train config.checkpoint_dir=./ckpt
+```
+
+### indexing run
+
+```shell
+SPLADE_CONFIG_NAME=config_splade_japanese python -m splade.index config.checkpoint_dir=./ckpt config.index_dir=./model_ckpt
+```
+
+### retrieve run
+
+```shell
+SPLADE_CONFIG_NAME=config_splade_japanese python -m splade.retrieve config.checkpoint_dir=./ckpt config.index_dir=./model_ckpt config.out_dir=./output
+```

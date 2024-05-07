@@ -98,6 +98,9 @@ def train(exp_dict: DictConfig):
     else:
         drop_last = False
 
+    print("check:")
+    print(exp_dict["data"])
+    print()
     if exp_dict["data"].get("type", "") == "triplets":
         data_train = PairsDatasetPreLoad(data_dir=exp_dict["data"]["TRAIN_DATA_DIR"])
         train_mode = "triplets"

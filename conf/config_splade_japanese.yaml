@@ -5,11 +5,11 @@ defaults: # (these specify which config FILES to use)
   - train/data: japanese_triplets
   - train/model: splade_japanese
   ############## INDEX ###################################
-  - index: msmarco
+  - index: msmarco_japanese
   ############## RETRIEVE ################################
-  - retrieve_evaluate: all
+  - retrieve_evaluate: msmarco_japanese
   ############### FLOPS ##################################
-  - flops: msmarco
+  - flops: msmarco_japanese
 
 # Direct PARAMETER setting
 config:

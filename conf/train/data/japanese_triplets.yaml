@@ -1,6 +1,7 @@
-# japanese
+# @package data
+
 type: triplets
-TRAIN_DATA_DIR: bclavie/mmarco-japanese-hard-negatives # raw.tsv
+TRAIN_DATA_DIR: data/bclavie/mmarco-japanese-hard-negatives # raw.tsv
 VALIDATION_SIZE_FOR_LOSS: 60000
 VALIDATION_FULL_RANKING:
   D_COLLECTION_PATH: data/mmarco/google/collections

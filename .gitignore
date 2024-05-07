@@ -10,3 +10,5 @@ intermediate/
 data.tar.gz
 data/msmarco
 data/mmarco
+nohup.out
+data/bclavie/mmarco-japanese-hard-negatives
