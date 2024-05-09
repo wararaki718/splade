@@ -13,7 +13,7 @@ defaults: # (these specify which config FILES to use)
 
 # Direct PARAMETER setting
 config:
-  loss: DistilMarginMSE
+  loss: PairwiseNLL
   regularizer:
     FLOPS:
       lambda_q: 0.1

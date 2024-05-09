@@ -12,3 +12,9 @@ data/msmarco
 data/mmarco
 nohup.out
 data/bclavie/mmarco-japanese-hard-negatives
+
+checkpoint/model_ckpt
+checkpoint/model
+checkpoint/tensorboard
+checkpoint/*.txt
+checkpoint/*.yaml
